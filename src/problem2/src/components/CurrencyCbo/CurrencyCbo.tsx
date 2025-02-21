@@ -30,6 +30,7 @@ export function CurrencyCbo(props: CurrencyCboProps) {
     const item = list.find(
       (item) => item.currency === selectedCurrency.currency
     );
+
     if (item) {
       buttonContentEl = (
         <div className="flex items-center gap-2">
@@ -97,7 +98,6 @@ export function CurrencyCbo(props: CurrencyCboProps) {
 
 export interface CurrencyCboProps {
   list: CurrencyItem[];
-
   selectedCurrency?: CurrencyItem;
   onChangeCurrency: (newCurrency: CurrencyItem) => void;
 }

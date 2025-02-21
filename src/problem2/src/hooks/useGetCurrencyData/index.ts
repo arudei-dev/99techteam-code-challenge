@@ -29,8 +29,9 @@ export default function useGetCurrencyData() {
             currencies.find(
               (currency) => currency.currency === currencyItem.currency
             )
-          )
+          ) {
             continue;
+          }
 
           currencies.push({
             currency: currencyItem.currency,

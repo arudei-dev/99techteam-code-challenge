@@ -1,15 +1,15 @@
+import { useState } from "react";
 import { RefreshCcw } from "lucide-react";
 
 import { CurrencyCbo } from "./components/CurrencyCbo";
 import { Button } from "./components/ui/button";
 import { Card } from "./components/ui/card";
 import { Input } from "./components/ui/input";
-import logo from "./logo.svg";
-import useGetCurrencyData from "./hooks/useGetCurrencyData";
 import { Spinner } from "./components/ui/spinner";
-import { useState } from "react";
+import useGetCurrencyData from "./hooks/useGetCurrencyData";
+import { NumberInput } from "./components/NumberInput";
 import type { CurrencyItem } from "./model";
-import NumberInput from "./components/NumberInput/NumberInput";
+import logo from "./logo.svg";
 
 export default function App() {
   const { data: currencyList, isLoading } = useGetCurrencyData();
